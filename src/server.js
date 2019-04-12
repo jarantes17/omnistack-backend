@@ -15,7 +15,10 @@ io.on('connection', socket => {
     });
 });
 
-mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-dub5w.mongodb.net/omnistack?retryWrites=true', {
+//mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-dub5w.mongodb.net/omnistack?retryWrites=true', {
+const mongoUser = 'omnistack';
+const mongoPwd = '147852369$'
+mongoose.connect(`mongodb://${mongoUser}:${mongoPwd}@localhost:27017/omnistack?retryWrites=true`, {
     useNewUrlParser: true,
 });
 
